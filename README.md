@@ -76,18 +76,3 @@ claude-gas-bridge/
 ## APIキーの管理について
 
 - GAS Interpreter 側が API キーを要求する場合は、ツール呼び出し時に `"apiKey": "..."` を指定するか、`bridge.mjs` 内部で環境変数を参照して埋め込むなど適宜調整してください。
-
-## トラブルシュート
-
-- **Node.js のバージョン**  
-  Node 18 以上かを確認
-- **プロセスがすぐ終了する**  
-  `bridge.mjs` 最後の `await new Promise(() => {})` が必要です
-- **GAS へリクエストが飛ばない**  
-  デプロイURLや認証スコープを再確認し、`console.error` ログを追ってみてください
-- **Claude Desktop でツール一覧に表示されない**  
-  `claude_desktop_config.json` のパスが正しいか確認。Claude を再起動してみる
-
----
-
-上記 README はあくまで目安です。運用環境に合わせて内容を追記・変更してください。
