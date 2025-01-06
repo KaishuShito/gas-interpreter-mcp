@@ -67,7 +67,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     apiKeyMask: apiKey ? "***" : "(none)"
   });
 
-  const GAS_ENDPOINT = "...";  // ← あなたのGASエンドポイント
+  const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxxxxx/exec";  // ← あなたのGASエンドポイント
 
   try {
     const response = await fetch(GAS_ENDPOINT, {
